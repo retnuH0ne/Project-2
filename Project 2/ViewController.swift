@@ -10,7 +10,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let initialLocation = CLLocation(latitude: 21.27904, longitude:-157.82722)
     let regionRadius: CLLocationDistance = 500
     let restaurantTitles: [String] = ["Waikiki Shokudo", "Topped Waikiki", "Earl's Kitchen + Bar", "Hula Grill Waikiki", "Duke's", "Paia Fish Market"]
-    let restaurantSubTitles: [String] = ["Japanese Cuisine", "Seafood Delight", "American Comfort Food", "Hawaiian Fusion", "Seafood Delight", "Local Catch"]
+    let restaurantSubTitles: [String] = ["4.5/5, Miso Butterfish", "4.5/5, Tofu Bibimbap", "4.9/5 USDA Prime Ribeye", "4.4/5, Kimo's Original Hula Pie", "4.4/5, Poke Tacos", "4.6/5, Seafood Pasta"]
     let restaurantImages: [UIImage] = [UIImage(named: "shokudo")!, UIImage(named: "topped")!, UIImage(named: "earls")!, UIImage(named: "hulaGrill")!, UIImage(named: "dukes")!, UIImage(named: "paia")!]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,6 +26,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel?.text = text
         
         cell.imageView?.image = restaurantImages[indexPath.row]
+        
+        cell.detailTextLabel?.text = restaurantSubTitles[indexPath.row]
         
         return cell
         
