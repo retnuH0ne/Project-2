@@ -58,7 +58,6 @@
                                 </segments>
                                 <connections>
                                     <action selector="segmentedControlPressed:" destination="Fuh-09-Cjn" eventType="valueChanged" id="Db6-gQ-WA5"/>
-                                    <action selector="tipSegment:" destination="Fuh-09-Cjn" eventType="valueChanged" id="rA7-id-21K"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Tip Amount:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPE-O3-90w">
@@ -171,6 +170,10 @@ Tip Amount: </string>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="kDr-7W-qUd" id="zZz-AH-HWk"/>
+                                    <outlet property="delegate" destination="kDr-7W-qUd" id="beb-5A-q3D"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vLk-FC-GwQ"/>
